@@ -14,9 +14,7 @@ CSim and HLS synthesis (SDSoC stuff pragma'd out) can be run inside `src` direct
 For deployment on the board, the hardware needs to be built inside `hw_build_*` using `make`.
 This should result in a sd_card directory containing BOOT.BIN, a Linux image, and the GenASM shared library.
 For the host software, run `make` inside `sw_build` to build an elf application.
-Copy these files on to an SD card and insert into board to boot.
-
-
+Copy these files, and the `src/data` folder, on to an SD card and insert into board to boot.
 
 
 ## Example Builds 
@@ -34,7 +32,6 @@ On the board, do
 where `<mode>` should be replaced by 1/2 for processing the sample short/long reads dataset.
 
 
-
 ## Notes
 
 The GenASM software has been modified to support only a maximum of 64 pattern length at a time. The divide-and-conquer approach must be used for longer strings.
@@ -42,4 +39,3 @@ The GenASM software has been modified to support only a maximum of 64 pattern le
 ## References
 
 D. S. Cali et al., "GenASM: A High-Performance, Low-Power Approximate String Matching Acceleration Framework for Genome Sequence Analysis," 2020 53rd Annual IEEE/ACM International Symposium on Microarchitecture (MICRO), 2020, pp. 951-966, doi: 10.1109/MICRO50266.2020.00081.
-
